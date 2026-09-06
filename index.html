@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Dimension Block</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            font-family: sans-serif;
+        }
+        .id-card {
+            width: min(295px, 95vw);
+            aspect-ratio: 295 / 460;
+            background-color: #ffffff;
+            border: 1px solid black;
+            border-radius: 4mm;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .redball {
+            width: 100%;
+            height: 80%;
+            background-color: red;
+            /* border: black 1px solid; */
+            border-radius: 4mm 4mm 50% 50%;
+            margin-bottom: 100px;
+            border-bottom: white 4px solid;
+            box-shadow: 0 4px 0 0 black;
+        }
+        .college-name {
+            font-size: clamp(18px, 9vw, 30px);
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-weight: 900;
+        }
+        .college-sub-name {
+            font-size: clamp(7px, 3vw, 10px);
+            color: white;
+            text-align: center;
+            margin: 0;
+            font-weight: bold;
+            font-weight: 900;
+        }
+        .college-autonomous {
+            font-size: clamp(9px, 4vw, 14px);
+            color: white;
+            text-align: center;
+            margin: 0;
+            font-weight: bold;
+            font-weight: 900;
+        }
+        .college-address {
+            font-size: clamp(7px, 3vw, 10px);
+            color: blue;
+            background: white;
+            text-align: center;
+            margin-top: 3px;
+            font-weight: bold;
+            font-weight: 400;
+            mask: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+        }
+        .student-id {
+            font-size: clamp(8px, 3.5vw, 12px);
+            color: white;
+            background: black;
+            text-align: center;
+            margin: 0 27% 0;
+            border-radius: 10px;
+            font-weight: bold;
+            font-weight: 900;
+            margin-top: 5px;
+        }
+        .main {
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 150px;
+            /* border: 3px solid rgb(255, 0, 251); */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+        .vertical-text {
+            transform: rotate(-90deg);
+            position: relative;
+            top: 20px;
+            right: 10px;
+            /* font-size: 18px; */
+            font-weight: bold;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .student-photo {
+            width: 45%;
+            height: 100%;
+            border: red 2px solid;
+            border-radius: 16px;
+            object-fit: cover;
+            margin-right: 47px;
+        }
+        .blood-drop {
+            width: 25px;
+            height: 40px;
+            position: relative;
+            top: 10px;
+            right: 20px;
+            
+        }
+        .name {
+            /* border: black 1px solid; */
+            margin: 0 20px 10px 20px;
+            color: red;
+            text-align: center;
+            letter-spacing: 1px;
+            font-size: clamp(13px, 6vw, 20px);
+            font-weight: 600;
+        }
+        .student-info {
+            /* border: black 1px solid; */
+            margin: 0 20px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .details {
+            width: 60%;
+            font-size: clamp(9px, 3.5vw, 16px);
+            display: flex;
+            flex-direction: column;
+            /* gap: 5px; */
+        }
+        .details span {
+            display: block;
+            font-weight: 600;
+        }
+        .college-logo {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+        }
+        .college-logo img {
+            width: clamp(45px, 20vw, 60px);
+            max-width: 100%;
+        }
+        .address {
+            height: 70px;
+            color: white;
+            /* border: black 1px solid; */
+            background-color: red;
+            margin: auto 5px 20px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(9px, 4vw, 12px);
+        }
+    </style>
+</head>
+<body>
+    <div class="id-card">
+        <div class="redball">
+            <div class="college-name">SWARNANDHRA</div>
+            <div class="college-sub-name">COLLEGE OF ENGINEERING AND TECHNOLOGY</div>
+            <div class="college-autonomous">(AUTONOMOUS)</div>
+            <div class="college-address">SEETHARAMPURAM, NARSAPUR - 534280,W.G.Dt.,A.P.</div>
+            <div class="student-id">STUDENT ID CARD</div>
+        </div>
+
+        <div class="main">
+            <span class="vertical-text">B.TECH.</span>
+            <img class="student-photo" src="24A21A05N0.jpg" alt="Student Photo">
+            <img class="blood-drop" src="blood-drop.jpg" alt="blood-drop">
+        </div>
+
+        <h4 class="name">K A NAGA RAJA VINAY</h4>
+
+        <div class="student-info">
+            <div class="details">
+                <span>24A21A05N0</span>
+                <span>B.TECH - CSE-D</span>
+                <span>2024-2028</span>
+                <span>9493386116</span>
+            </div>
+            <div class="college-logo">
+                <img src="download.png" alt="swrn-logo">
+                <img src="sign.jpg" alt="sign">
+                <!-- <span>Principal</span> -->
+            </div>
+        </div>
+
+        <div class="address">
+            malikipuram
+        </div>
+    </div>
+</body>
+</html>
